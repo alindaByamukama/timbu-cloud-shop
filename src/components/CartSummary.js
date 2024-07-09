@@ -3,43 +3,44 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CartSummary = ({ totalProducts, totalPrice, onCheckout }) => (
-  <SummaryContainer>
-    <SummaryTitle>Summary</SummaryTitle>
-    <SummaryItem>
-      <SummaryLabel>Total Products</SummaryLabel>
-      <SummaryValue>{`${totalProducts}`}</SummaryValue>
-    </SummaryItem>
-    <SummaryItem>
-      <SummaryLabel>Shopping Cost</SummaryLabel>
-      <SummaryValue>Fee</SummaryValue>
-    </SummaryItem>
-    <SummaryItem>
-      <SummaryLabel>Total Cost</SummaryLabel>
-      <SummaryValue>{`₦${totalPrice}`}</SummaryValue>
-    </SummaryItem>
-    <CheckoutButton onClick={onCheckout}>Check Out</CheckoutButton>
-  </SummaryContainer>
-);
+const CartSummary = ({ totalProducts, onCheckout }) => {
+  return (
+    <SummaryContainer>
+      <SummaryTitle>Summary</SummaryTitle>
+      <SummaryItem>
+        <span>Total Products</span>
+        <span>{`₦${totalProducts}`}</span>
+      </SummaryItem>
+      <SummaryItem>
+        <span>Shopping Cost</span>
+        <span>Fee</span>
+      </SummaryItem>
+      <SummaryItem>
+        <span>Total Cost</span>
+        <span>{`₦${totalProducts}`}</span>
+      </SummaryItem>
+      <CheckoutButton onClick={onCheckout}>Check Out</CheckoutButton>
+    </SummaryContainer>
+  );
+};
 
 const SummaryContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  flex: 1;
   padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-left: 2rem;
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-left: 0;
     margin-top: 2rem;
   }
 `;
 
 const SummaryTitle = styled.h2`
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
-  text-align: center;
 `;
 
 const SummaryItem = styled.div`
@@ -48,28 +49,18 @@ const SummaryItem = styled.div`
   margin-bottom: 1rem;
 `;
 
-const SummaryLabel = styled.div`
-  font-size: 1rem;
-`;
-
-const SummaryValue = styled.div`
-  font-size: 1rem;
-  font-weight: bold;
-`;
-
 const CheckoutButton = styled.button`
-  background-color: #FF6B6B;
+  background: #ff6f61;
   color: white;
-  padding: 1rem;
   border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
+  border-radius: 8px;
+  padding: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
+  width: 100%;
+  font-size: 1rem;
 
-  &:hover {
-    background-color: #FF3B3B;
+  @media (max-width: 768px) {
+    width: auto;
   }
 `;
 
