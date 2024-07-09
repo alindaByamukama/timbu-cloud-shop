@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Footer from './components/Footer';
 
 const App = () => (
   <Router>
@@ -16,6 +17,7 @@ const App = () => (
       <Route path="/checkout" element={<Checkout />} />
       {/* <Route path="/products" element={<ProductCatalog />} /> */}
     </Routes>
+    <Footer />
   </Router>
 );
 
