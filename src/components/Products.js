@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Banner from '../components/Banner';
+import ProductCatalog from '../components/ProductCatalog';
 
 const Products = () => (
   <Container>
     <Banner />
-    <h1>Welcome to the Products Page</h1>
-    <Button>Click Me</Button>
+    <ProductCatalog />
   </Container>
 );
 

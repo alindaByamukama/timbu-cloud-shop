@@ -17,13 +17,14 @@ const Banner = () => (
 const BannerContainer = styled.div`
   background-image: url(${bannerImage});
   background-size: cover;
-  background-position: center;
+  background-position: right;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: left;
   color: var(--neutral-color);
   padding: 2rem;
+  backrougnd-color:background: #F6FCFF;
 
   @media (max-width: 768px) {
     height: 400px;
