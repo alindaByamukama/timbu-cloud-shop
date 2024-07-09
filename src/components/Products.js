@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Banner from '../components/Banner';
 
 const Products = () => (
   <Container>
+    <Banner />
     <h1>Welcome to the Products Page</h1>
     <Button>Click Me</Button>
   </Container>
