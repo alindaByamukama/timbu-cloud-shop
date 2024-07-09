@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Vistamart - Timbu Cloud Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Vistamart, a static, interactive, responsive e-commerce app developed as part of the HNG Stage Two task. This project was a collaboration between developers and the designer Lawal Sofiyat Olabisi.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+**Project Name:** Timbu Cloud Shop  
+**App Name:** Vistamart  
+**Task:** Stage Two - Collaborate with a Designer and develop a static, interactive, responsive React or Next.js app
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can view the live demo of the project [here](https://timbu-cloud-shop-vistamart.vercel.app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design
 
-### `npm test`
+The design for this project was created by Lawal Sofiyat Olabisi and can be viewed on Figma [here](https://www.figma.com/design/E6YreLkdII9n9zBkIwdUe7/HNG-STAGE-2-TASK?node-id=0-1&t=Z9ouMak6YS569sv4-0).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Designer: Lawal Sofiyat Olabisi**
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Styled-components
+- React Router DOM
+- Vercel for deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Responsive design that works on various devices and screen sizes.
+- Interactive elements including buttons, links, and forms.
+- A static product catalog with cart and checkout functionalities.
+- Clean and intuitive user interface designed in Figma.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a local copy of the project up and running, follow these simple steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure you have Node.js and npm installed on your machine.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   cd <repository-name>
+   git checkout development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install the dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+    npm install
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Start the development server:
 
-### Analyzing the Bundle Size
+   ```sh
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Acknowledgements
+* React
+* Styled-components
+* Vercel
+* Figma
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Developer: Alinda Byamukama**
