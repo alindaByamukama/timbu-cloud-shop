@@ -2,14 +2,14 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleAddToCart = () => {
-    // Add product to cart logic
-    router.push('/cart');
+    // Redirect to cart page
+    navigate('/cart');
   };
 
   return (
@@ -24,21 +24,6 @@ const ProductCard = ({ product }) => {
     </Card>
   );
 };
-
-const Card = styled.div`
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 5px;
-  position: relative;
-
-  &:hover ${Info} {
-    filter: blur(4px);
-  }
-
-  &:hover ${AddToCartButton} {
-    opacity: 1;
-  }
-`;
 
 const Image = styled.img`
   width: 100%;
@@ -83,6 +68,21 @@ const AddToCartButton = styled.button`
 
   &:hover {
     background-color: #ff3b30;
+  }
+`;
+
+const Card = styled.div`
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover ${Info} {
+    filter: blur(4px);
+  }
+
+  &:hover ${AddToCartButton} {
+    opacity: 1;
   }
 `;
 
