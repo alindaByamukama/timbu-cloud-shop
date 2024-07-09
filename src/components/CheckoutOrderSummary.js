@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const OrderSummary = ({ items, total }) => (
+const OrderSummary = ({ items = [], total = 0 }) => (
   <SummaryContainer>
     <SummaryTitle>Order Summary</SummaryTitle>
     {items.map((item, index) => (
