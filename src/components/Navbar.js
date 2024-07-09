@@ -10,8 +10,8 @@ const Navbar = () => (
     <Logo src={logo} alt="VistaMart Logo" />
     <NavLinks>
       <NavLink to="/">Categories</NavLink>
-      <NavLink to="/new-arrivals">New Arrivals</NavLink>
-      <NavLink to="/contact">Contact Us</NavLink>
+      <NavLink to="#">New Arrivals</NavLink>
+      <NavLink to="#">Contact Us</NavLink>
     </NavLinks>
     <SearchContainer>
       <SearchInput type="text" placeholder="Search Product" />
@@ -19,7 +19,7 @@ const Navbar = () => (
     </SearchContainer>
     <Icons>
       <AccountIcon>👤 Account</AccountIcon>
-      <CartIcon>🛒</CartIcon>
+      <NavLink to="/cart"><CartIcon>🛒</CartIcon></NavLink>
     </Icons>
   </Nav>
 );
