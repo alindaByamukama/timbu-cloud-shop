@@ -3,17 +3,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CartProductDetails = ({ product }) => (
-  <DetailsContainer>
-    <ProductImage src={product.image} alt={product.name} />
-    <ProductInfo>
-      <ProductName>{product.name}</ProductName>
-      <ProductDescription>{product.description}</ProductDescription>
-    </ProductInfo>
-  </DetailsContainer>
-);
+const CartProductDetails = ({ product }) => {
+  return (
+    <ProductContainer>
+      <ProductImage src={product.image} alt={product.name} />
+      <ProductInfo>
+        <ProductName>{product.name}</ProductName>
+        <ProductPrice>{`₦${product.price}`}</ProductPrice>
+      </ProductInfo>
+    </ProductContainer>
+  );
+};
 
-const DetailsContainer = styled.div`
+const ProductContainer = styled.div`
   display: flex;
   align-items: center;
 
@@ -24,32 +26,29 @@ const DetailsContainer = styled.div`
 `;
 
 const ProductImage = styled.img`
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
 
   @media (max-width: 768px) {
+    margin-right: 0;
     margin-bottom: 1rem;
   }
 `;
 
 const ProductInfo = styled.div`
-  margin-left: 1rem;
-
-  @media (max-width: 768px) {
-    margin-left: 0;
-  }
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProductName = styled.div`
   font-size: 1rem;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
 `;
 
-const ProductDescription = styled.div`
-  font-size: 0.875rem;
-  color: #555;
+const ProductPrice = styled.div`
+  font-size: 1rem;
+  color: #777;
 `;
 
 export default CartProductDetails;
