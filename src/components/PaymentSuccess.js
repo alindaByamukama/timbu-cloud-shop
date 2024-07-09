@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import successImage from '../assets/success-icon.png';
+
 
 const PaymentSuccessContainer = styled.div`
   display: flex;
@@ -58,15 +61,35 @@ const ContinueShoppingButton = styled.button`
   }
 `;
 
+const SuccessImage = styled.img`
+  width: 682px;
+  height: 420px;
+  gap: 0px;
+  opacity: 1;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+`;
+
 const PaymentSuccess = () => {
+  const navigate = useNavigate();
+
+  const handleContinueShopping = () => {
+    // Redirect to cart page
+    navigate('/');
+  };
   return (
     <PaymentSuccessContainer>
       <SuccessIcon>
-        <img src="../assets/success-icon.png" alt="Payment Successful" />
+        <SuccessImage src={successImage} alt="Success" />
       </SuccessIcon>
       <SuccessTitle>Payment Successful</SuccessTitle>
       <SuccessText>Thank you for your purchase! Your order has been placed successfully</SuccessText>
-      <ContinueShoppingButton onClick={() => window.location.href = '/shop'}>Continue Shopping</ContinueShoppingButton>
+      <ContinueShoppingButton onClick={handleContinueShopping}>Continue Shopping</ContinueShoppingButton>
     </PaymentSuccessContainer>
   );
 };

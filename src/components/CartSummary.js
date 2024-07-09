@@ -2,14 +2,22 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
-const CartSummary = ({ totalProducts, onCheckout }) => {
+const CartSummary = ({ totalProducts }) => {
+  const navigate = useNavigate();
+
+  const handleAddToCheckout = () => {
+    // Redirect to checkout page
+    navigate('/checkout');
+  };
+
   return (
     <SummaryContainer>
       <SummaryTitle>Summary</SummaryTitle>
       <SummaryItem>
         <span>Total Products</span>
-        <span>{`₦${totalProducts}`}</span>
+        <span>{`${totalProducts}`}</span>
       </SummaryItem>
       <SummaryItem>
         <span>Shopping Cost</span>
@@ -17,9 +25,9 @@ const CartSummary = ({ totalProducts, onCheckout }) => {
       </SummaryItem>
       <SummaryItem>
         <span>Total Cost</span>
-        <span>{`₦${totalProducts}`}</span>
+        <span>₦36,000</span>
       </SummaryItem>
-      <CheckoutButton onClick={onCheckout}>Check Out</CheckoutButton>
+      <CheckoutButton onClick={handleAddToCheckout}>Check Out</CheckoutButton>
     </SummaryContainer>
   );
 };

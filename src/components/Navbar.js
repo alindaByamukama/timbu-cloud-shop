@@ -26,7 +26,7 @@ const Navbar = () => (
       <AccountIcon>
         <Icon src={accountIcon} alt="Account" /> Account
       </AccountIcon>
-      <NavLink to="/cart">
+      <NavLink to="/emptycart">
         <CartIcon>
           <Icon  src={cartIcon} alt="Cart" />
         </CartIcon>

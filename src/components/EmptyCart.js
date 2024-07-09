@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import emptyCartImage from '../assets/empty-cart-icon.png';
 
 const EmptyCartContainer = styled.div`
   display: flex;
@@ -58,15 +60,33 @@ const ShopNowButton = styled.button`
   }
 `;
 
+const EmptyCartImage = styled.img`
+  width: 682px;
+  height: 420px;
+  gap: 0px;
+  opacity: 1;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+`;
+
 const EmptyCart = () => {
+  const navigate = useNavigate();
+  const handleShopNow = () => {
+    navigate('/');
+  };
   return (
     <EmptyCartContainer>
       <EmptyCartIcon>
-        <img src="../assets/empty-cart-icon.png" alt="Empty Cart" />
+        <EmptyCartImage src={emptyCartImage} alt="Empty Cart" />
       </EmptyCartIcon>
       <EmptyCartTitle>Your Cart is Empty</EmptyCartTitle>
       <EmptyCartText>You haven't added anything to your cart. Explore our collection</EmptyCartText>
-      <ShopNowButton onClick={() => window.location.href = '/shop'}>Shop Now</ShopNowButton>
+      <ShopNowButton onClick={handleShopNow}>Shop Now</ShopNowButton>
     </EmptyCartContainer>
   );
 };

@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
-const PaymentMethod = () => (
-  <PaymentContainer>
+const PaymentMethod = () => {
+  const navigate = useNavigate();
+  const handlePayButton = () => {
+    // Redirect to cart page
+    navigate('/success');
+  };
+  return (
+      <PaymentContainer>
     <PaymentTitle>Payment Method</PaymentTitle>
     <Form>
       <InputRow>
@@ -15,10 +22,11 @@ const PaymentMethod = () => (
         <Input placeholder="CVC" />
       </InputRow>
       <Input placeholder="Card holder Name" />
-      <PayButton>Pay Now</PayButton>
+      <PayButton onClick={handlePayButton}>Pay Now</PayButton>
     </Form>
   </PaymentContainer>
-);
+  )
+};
 
 const PaymentContainer = styled.div`
   padding: 1rem;
