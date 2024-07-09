@@ -11,30 +11,29 @@ const Banner = () => (
       <Subtitle>Our eco-friendly water bottles offer sustainable hydration solutions. Enjoy pure refreshment while reducing environmental impact.</Subtitle>
       <Button>Shop Now</Button>
     </Content>
+    <BannerImage src={bannerImage} alt="Banner" />
   </BannerContainer>
 );
 
 const BannerContainer = styled.div`
-  background-image: url(${bannerImage});
-  background-size: cover;
-  background-position: right;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: left;
   color: var(--neutral-color);
   padding: 2rem;
-  backrougnd-color:background: #F6FCFF;
+  background-color: #F6FCFF;
 
   @media (max-width: 768px) {
-    height: 400px;
+    flex-direction: column;
+    height: auto;
     padding: 1rem;
   }
 
-  @media (max-width: 480px) {
-    height: 300px;
-    padding: 0.5rem;
-  }
+  // @media (max-width: 480px) {
+  //   height: 300px;
+  //   padding: 0.5rem;
+  // }
 `;
 
 const Content = styled.div`
@@ -42,7 +41,7 @@ const Content = styled.div`
   text-align: left;
 
   @media (max-width: 768px) {
-    max-width: 100%;
+    text-align: center;
   }
 `;
 
@@ -100,4 +99,17 @@ const Button = styled.button`
   }
 `;
 
+const BannerImage = styled.img`
+  width: 682px;
+  height: 420px;
+  gap: 0px;
+  opacity: 1;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+`;
 export default Banner;

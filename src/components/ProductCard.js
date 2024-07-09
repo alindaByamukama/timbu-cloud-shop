@@ -5,27 +5,44 @@ import styled from 'styled-components';
 
 const ProductCard = ({ product }) => (
   <Card>
-    <Image src={product.image} alt={product.name} />
+    <ImageContainer>
+        <Image src={product.image} alt={product.name} />
+    </ImageContainer>
     <Info>
       <Name>{product.name}</Name>
       <Description>{product.description}</Description>
       <Price>{product.price}</Price>
-      <Button>Add to Cart</Button>
     </Info>
+    <AddToCartButton>Add to Cart</AddToCartButton>
   </Card>
 );
 
-const Card = styled.div`
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s;
+
+const AddToCartButton = styled.button`
+  padding: 0.75rem 2rem;
+  background: var(--accent-color);
+  color: var(--neutral-color);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+
   &:hover {
-    transform: scale(1.05);
+    background: var(--accent-color-dark);
   }
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  background: #f0f0f0;
+  padding: 1rem;
 `;
 
 const Image = styled.img`
@@ -36,6 +53,7 @@ const Image = styled.img`
 const Info = styled.div`
   padding: 1rem;
   text-align: center;
+  transition: filter 0.3s;
 `;
 
 const Name = styled.h3`
@@ -54,17 +72,27 @@ const Price = styled.p`
   color: var(--primary-color);
 `;
 
-const Button = styled.button`
-  padding: 0.75rem 2rem;
-  background: var(--accent-color);
-  color: var(--neutral-color);
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
+const Card = styled.div`
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+  position: relative;
+
   &:hover {
-    background: var(--accent-color-dark);
+    transform: scale(1.05);
+
+    ${Info} {
+      filter: blur(5px);
+    }
+      
+    ${AddToCartButton} {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 `;
 

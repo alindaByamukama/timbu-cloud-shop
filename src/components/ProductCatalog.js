@@ -76,7 +76,7 @@ const ProductCatalog = () => (
 
 const CatalogContainer = styled.div`
   padding: 2rem;
-  margin: 2rem;
+  margin: 0.5rem;
 `;
 
 const Title = styled.h2`
