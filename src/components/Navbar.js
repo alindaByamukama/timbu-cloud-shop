@@ -15,7 +15,7 @@ const Navbar = () => (
     </NavLinks>
     <SearchContainer>
       <SearchInput type="text" placeholder="Search Product" />
-      <SearchButton>Q</SearchButton>
+      <SearchButton>🔍</SearchButton>
     </SearchContainer>
     <Icons>
       <AccountIcon>👤 Account</AccountIcon>
